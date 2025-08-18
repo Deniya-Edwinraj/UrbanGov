@@ -84,7 +84,7 @@ export default function Header() {
               </div>
 
               <div className="col-md-auto d-md-flex">
-                <button className="btn btn-lg button fw-bold rounded-0 px-3 py-2 text-white">
+                <button className="btn btn-lg button fw-bold rounded-0 px-3 py-2 text-white position-relative overflow-hidden">
                   Report an Issue
                 </button>
               </div>

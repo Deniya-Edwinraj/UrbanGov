@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/logo 1.png";
+import Logo from "../assets/logo.png";
 import SocialIcons from "./SocialIcons";
 import { galleryData } from "../Constant/Data";
 
@@ -18,7 +18,7 @@ export default function Footer() {
               <li className="d-flex align-items-center gap-3">
                 <div className="text-start fw-bold d-flex flex-column">
                   <a
-                    className="text-decoration-none text-dark hover-link"
+                    className="text-decoration-none text-white hover-link"
                     href="tel:+(01) 9886 0005"
                   >
                     <i className="bi bi-telephone fs-5 me-2"></i>
@@ -29,7 +29,7 @@ export default function Footer() {
               <li className="d-flex align-items-center">
                 <div className="text-start fw-bold d-flex flex-column">
                   <a
-                    className="text-decoration-none text-dark hover-link"
+                    className="text-decoration-none text-white hover-link"
                     href="mailto:info@urbangov.com"
                   >
                     <i className="bi bi-envelope fs-5 me-2"></i>
@@ -43,13 +43,13 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-12 col-md-2 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start">
-            <h4 className="my-4 text-dark fw-bold heading">Quick Links</h4>
-            <ul className="list-unstyled text-dark fw-semibold lh-lg">
+          <div className="col-12 col-md-2 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start text-white">
+            <h4 className="my-4 text-white fw-bold heading">Quick Links</h4>
+            <ul className="list-unstyled text-white fw-semibold lh-lg">
               <li className="mb-2">
                 <a
                   href="/about"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   About Us
                 </a>
@@ -57,7 +57,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/services"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   Services
                 </a>
@@ -65,7 +65,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/departments"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   Departments
                 </a>
@@ -73,7 +73,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/news"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   News
                 </a>
@@ -81,7 +81,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/events"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   Events
                 </a>
@@ -89,7 +89,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/faq"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   FAQs
                 </a>
@@ -97,13 +97,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-12 col-md-2 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start">
-            <h4 className="my-4 text-dark heading fw-bold">Services</h4>
-            <ul className="list-unstyled text-dark fw-semibold lh-lg">
+          <div className="col-12 col-md-2 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start text-white">
+            <h4 className="my-4 text-white heading fw-bold">Services</h4>
+            <ul className="list-unstyled text-white fw-semibold lh-lg">
               <li className="mb-2">
                 <a
                   href="/about"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   About Us
                 </a>
@@ -111,7 +111,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/services"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   Services
                 </a>
@@ -119,7 +119,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/departments"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   Departments
                 </a>
@@ -127,7 +127,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/news"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   News
                 </a>
@@ -135,7 +135,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/events"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   Events
                 </a>
@@ -143,7 +143,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/faq"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   FAQs
                 </a>
@@ -151,13 +151,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-12 col-md-2 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start">
-            <h4 className="my-4 text-dark heading fw-bold">Departments</h4>
-            <ul className="list-unstyled text-dark fw-semibold lh-lg">
+          <div className="col-12 col-md-2 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start text-white">
+            <h4 className="my-4 text-white heading fw-bold">Departments</h4>
+            <ul className="list-unstyled text-white fw-semibold lh-lg">
               <li className="mb-2">
                 <a
                   href="/about"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   About Us
                 </a>
@@ -165,7 +165,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/services"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   Services
                 </a>
@@ -173,7 +173,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/departments"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   Departments
                 </a>
@@ -181,7 +181,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/news"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   News
                 </a>
@@ -189,7 +189,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/events"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   Events
                 </a>
@@ -197,7 +197,7 @@ export default function Footer() {
               <li className="mb-2">
                 <a
                   href="/faq"
-                  className="text-decoration-none text-dark hover-link"
+                  className="text-decoration-none text-white hover-link"
                 >
                   FAQs
                 </a>
@@ -205,18 +205,28 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-12 col-md-3 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start">
-            <h4 className="my-4 text-dark heading fw-bold">Gallery</h4>
+          <div className="col-12 col-md-3 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start text-white">
+            <h4 className="my-4 text-white heading fw-bold">Gallery</h4>
             <div className="row">
               {galleryData.map((image, index) => (
                 <div key={index} className="col-4 mb-3">
-                  <div className="image-container position-relative">
+                  <div
+                    className="image-container position-relative border-dark d-inline-block overflow-hidden"
+                    style={{ width: "90px", height: "90px" }}
+                  >
                     <img
                       src={image}
                       alt={`Gallery image ${index}`}
-                      style={{ width: "90px", height: "90px" }}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
                     />
-                    <div className="overlay position-absolute start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+                    <div
+                      className="overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center"
+                      style={{ top: 0, left: 0 }}
+                    >
                       <i className="bi bi-instagram text-white"></i>
                     </div>
                   </div>
@@ -230,11 +240,14 @@ export default function Footer() {
       {/* Second Row */}
       <div className="border-top">
         <div className="container">
-          <div className="row justify-content-between align-items-center py-3">
+          <div className="row justify-content-between align-items-center py-2">
             <div className="col-12 text-center">
-              <p className="text-dark fw-bold gy-3 py-2 m-0">
-                © {new Date().getFullYear()} UrbanGov. All right reserved. |
-                Designed by Deniya Edwinraj
+              <p className="text-white gy-3 lh-lg py-2 m-0">
+                © {new Date().getFullYear()}{" "}
+                <span className="highlight fw-bold">UrbanGov</span>. All right
+                reserved. <br />
+                Designed by{" "}
+                <span className="highlight fw-bold">Deniya Edwinraj</span>
               </p>
             </div>
           </div>

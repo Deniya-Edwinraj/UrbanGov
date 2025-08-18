@@ -4,7 +4,7 @@ const SocialIcons = () => {
   return (
     <div className="parent w-100 h-100 d-flex justify-content-center align-items-center">
       <div className="child d-flex justify-content-center align-items-center rounded child-1">
-        <button className="button w-100 h-100 border-0 bg-transparent fs-4 btn-1">
+        <button className="social-button w-100 h-100 border-0 bg-transparent fs-4 btn-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -18,7 +18,7 @@ const SocialIcons = () => {
         </button>
       </div>
       <div className="child d-flex justify-content-center align-items-center rounded child-2 mx-2">
-        <button className="button w-100 h-100 border-0 bg-transparent fs-4 btn-2">
+        <button className="social-button w-100 h-100 border-0 bg-transparent fs-4 btn-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -32,7 +32,7 @@ const SocialIcons = () => {
         </button>
       </div>
       <div className="child d-flex justify-content-center align-items-center rounded child-3">
-        <button className="button w-100 h-100 border-0 bg-transparent fs-4 btn-3">
+        <button className="social-button w-100 h-100 border-0 bg-transparent fs-4 btn-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"

@@ -6,7 +6,7 @@ import "./App.css";
 import ScrollToTop from "./Components/ScrollToTop";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-
+import Home from "./Pages/Home";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Header />
         <div className="App">
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
           </Routes>
         </div>
         <ScrollToTop />

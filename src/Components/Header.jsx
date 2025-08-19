@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Logo from "../assets/logo 1.png";
+import Logo1 from "../assets/logo.png";
 import SocialIcons from "./SocialIcons";
 
 export default function Header() {
@@ -110,10 +111,10 @@ export default function Header() {
               className="collapse navbar-collapse justify-content-center"
               id="navbarNav"
             >
-              <ul className="navbar-nav d-flex align-items-center gap-5">
-                <li className="nav-item py-3">
+              <ul className="navbar-nav d-flex align-items-center gap-4">
+                <li className="nav-item py-2">
                   <a
-                    className="nav-link fw-bold position-relative active-link text-uppercase"
+                    className="nav-link fs-5 fw-bold position-relative active-link text-uppercase"
                     href="/"
                   >
                     HOME
@@ -121,11 +122,11 @@ export default function Header() {
                 </li>
 
                 <li
-                  className="nav-item py-3 position-relative"
+                  className="nav-item py-2 position-relative"
                   onMouseEnter={() => setIsDropdownOpen(true)}
                   onMouseLeave={() => setIsDropdownOpen(false)}
                 >
-                  <button className="nav-link fw-bold position-relative bg-transparent border-0 text-uppercase">
+                  <button className="nav-link fs-5 fw-bold position-relative bg-transparent border-0 text-uppercase">
                     ABOUT
                     <i className="bi bi-caret-down-fill ms-1"></i>
                   </button>
@@ -156,36 +157,36 @@ export default function Header() {
                   )}
                 </li>
 
-                <li className="nav-item py-3">
+                <li className="nav-item py-2">
                   <a
-                    className="nav-link fw-bold position-relative text-uppercase"
+                    className="nav-link fs-5 fw-bold position-relative text-uppercase"
                     href="/services"
                   >
                     SERVICES
                   </a>
                 </li>
 
-                <li className="nav-item py-3">
+                <li className="nav-item py-2">
                   <a
-                    className="nav-link fw-bold position-relative text-uppercase"
+                    className="nav-link fs-5 fw-bold position-relative text-uppercase"
                     href="/departments"
                   >
                     Departments
                   </a>
                 </li>
 
-                <li className="nav-item py-3">
+                <li className="nav-item py-2">
                   <a
-                    className="nav-link fw-bold position-relative text-uppercase"
+                    className="nav-link fs-5 fw-bold position-relative text-uppercase"
                     href="/news"
                   >
                     News
                   </a>
                 </li>
 
-                <li className="nav-item py-3">
+                <li className="nav-item py-2">
                   <a
-                    className="nav-link fw-bold position-relative text-uppercase"
+                    className="nav-link fs-5 fw-bold position-relative text-uppercase"
                     href="/contact"
                   >
                     CONTACT
@@ -194,7 +195,7 @@ export default function Header() {
               </ul>
             </div>
 
-            <div className="col-md-auto d-flex align-items-center justify-content-end text-white fw-semibold">
+            <div className="col-md-auto d-none d-md-flex align-items-center justify-content-end text-white fw-semibold">
               <SocialIcons />
             </div>
 
@@ -225,9 +226,9 @@ export default function Header() {
           id="mobileMenu"
           aria-labelledby="mobileMenuLabel"
         >
-          <div className="offcanvas-header p-3">
+          <div className="offcanvas-header py-3 mx-3">
             <a className="navbar-brand d-flex align-items-center" href="/">
-              <img src={Logo} alt="Logo" style={{ height: "40px" }} />
+              <img src={Logo1} alt="Logo" style={{ height: "40px" }} />
             </a>
             <button
               type="button"
@@ -238,9 +239,9 @@ export default function Header() {
           </div>
 
           <div className="offcanvas-body d-flex align-items-center justify-content-center">
-            <ul className="navbar-nav text-center">
+            <ul className="navbar-nav text-center text-uppercase">
               <li className="nav-item py-3">
-                <a className="nav-link fw-bold fs-2 text-dark" href="/">
+                <a className="nav-link fw-bold fs-2 text-white" href="/">
                   Home
                 </a>
               </li>
@@ -249,7 +250,7 @@ export default function Header() {
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
-                <button className="nav-item fw-bold fs-2 text-dark bg-transparent border-0">
+                <button className="nav-item fw-bold text-uppercase fs-2 text-white bg-transparent border-0">
                   About
                   <i className="bi bi-caret-down-fill ms-1"></i>
                 </button>
@@ -285,22 +286,22 @@ export default function Header() {
                 )}
               </li>
               <li className="nav-item py-3 fs-2">
-                <a className="nav-link fw-bold text-dark" href="/services">
+                <a className="nav-link fw-bold text-white" href="/services">
                   Services
                 </a>
               </li>
               <li className="nav-item py-3 fs-2">
-                <a className="nav-link fw-bold text-dark" href="/services">
+                <a className="nav-link fw-bold text-white" href="/services">
                   Care Options
                 </a>
               </li>
               <li className="nav-item py-3 fs-2">
-                <a className="nav-link fw-bold text-dark" href="/blog">
+                <a className="nav-link fw-bold text-white" href="/blog">
                   Blog
                 </a>
               </li>
               <li className="nav-item py-3 fs-2">
-                <a className="nav-link fw-bold text-dark" href="/contact-us">
+                <a className="nav-link fw-bold text-white" href="/contact-us">
                   Contact Us
                 </a>
               </li>
@@ -310,16 +311,17 @@ export default function Header() {
                 variant="buttonv1"
               /> */}
               <div className="row pt-4">
-                <div className="col-12 d-flex align-items-center justify-content-end text-dark">
+                <div className="col-12 d-flex align-items-center justify-content-end text-white">
                   <span className="mb-0 px-3 small">News & Events</span>
-                  <span className="mb-0 px-3 border-start border-dark small">
+                  <span className="mb-0 px-3 border-start border-white small">
                     Donate
                   </span>
-                  <span className="mb-0 px-3 border-start border-dark small">
+                  <span className="mb-0 px-3 border-start border-white small">
                     Career
                   </span>
                 </div>
               </div>
+              
             </ul>
           </div>
         </div>

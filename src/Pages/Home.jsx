@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import HeroImg from "../assets/hero1.jpg";
-import { slideData } from "../Constant/Data";
+import { services, slideData } from "../Constant/Data";
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(100);
+  const intervalRef = useRef(null);
+  const zoomIntervalRef = useRef(null);
 
   // Date & time getting
   const [date, setDate] = useState(new Date());
@@ -14,6 +18,45 @@ const Home = () => {
     }, 1000); // Update every second
     return () => clearInterval(timer); // Cleanup on component unmount
   }, []);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    if (!isPaused) {
+      intervalRef.current = setInterval(() => {
+        setActiveIndex((prevIndex) =>
+          prevIndex === slideData.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000); // Change slide every 5 seconds
+    }
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [isPaused, slideData.length]);
+
+  // Background zoom effect
+  useEffect(() => {
+    // Reset zoom level when slide changes
+    setZoomLevel(100);
+
+    // Start zoom animation
+    zoomIntervalRef.current = setInterval(() => {
+      setZoomLevel((prevZoom) => {
+        if (prevZoom >= 110) {
+          return 110; // Max zoom level
+        }
+        return prevZoom + 0.05; // Smooth zoom increment
+      });
+    }, 50); // Adjust speed of zoom
+
+    return () => {
+      if (zoomIntervalRef.current) {
+        clearInterval(zoomIntervalRef.current);
+      }
+    };
+  }, [activeIndex]);
 
   // Function to get the ordinal suffix (st, nd, rd, th)
   const getOrdinalSuffix = (day) => {
@@ -45,6 +88,17 @@ const Home = () => {
   // Handle manual slide change
   const handleSelect = (selectedIndex) => {
     setActiveIndex(selectedIndex);
+    // Reset the timer when manually changing slides
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    if (!isPaused) {
+      intervalRef.current = setInterval(() => {
+        setActiveIndex((prevIndex) =>
+          prevIndex === slideData.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000);
+    }
   };
 
   // Navigate to next slide
@@ -52,6 +106,17 @@ const Home = () => {
     const nextIndex =
       activeIndex === slideData.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
+    // Reset the timer when manually changing slides
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    if (!isPaused) {
+      intervalRef.current = setInterval(() => {
+        setActiveIndex((prevIndex) =>
+          prevIndex === slideData.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000);
+    }
   };
 
   // Navigate to previous slide
@@ -59,6 +124,43 @@ const Home = () => {
     const prevIndex =
       activeIndex === 0 ? slideData.length - 1 : activeIndex - 1;
     setActiveIndex(prevIndex);
+    // Reset the timer when manually changing slides
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    if (!isPaused) {
+      intervalRef.current = setInterval(() => {
+        setActiveIndex((prevIndex) =>
+          prevIndex === slideData.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000);
+    }
+  };
+
+  // Pause auto-slide on hover
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    // Pause zoom animation
+    if (zoomIntervalRef.current) {
+      clearInterval(zoomIntervalRef.current);
+    }
+  };
+
+  // Resume auto-slide when not hovering
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+    // Resume zoom animation
+    zoomIntervalRef.current = setInterval(() => {
+      setZoomLevel((prevZoom) => {
+        if (prevZoom >= 110) {
+          return 110; // Max zoom level
+        }
+        return prevZoom + 0.05; // Smooth zoom increment
+      });
+    }, 50);
   };
 
   return (
@@ -69,10 +171,14 @@ const Home = () => {
         className="carousel slide overflow-hidden"
         data-bs-ride="carousel"
         style={{
-          backgroundImage: `url(${slideData[0].image})`,
-          backgroundSize: "cover",
+          backgroundImage: `url(${slideData[activeIndex].image})`,
+          backgroundSize: `${zoomLevel}%`,
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          transition: "background-size 0.5s ease-out", // Smooth transition for zoom
         }}
+        // onMouseEnter={handleMouseEnter}
+        // onMouseLeave={handleMouseLeave}
       >
         <div className="bar"></div>
         <div className="container">
@@ -114,7 +220,9 @@ const Home = () => {
             {slideData.map((slide, index) => (
               <div
                 key={index}
-                className={`carousel-item ${index === 0 ? "active" : ""}`}
+                className={`carousel-item ${
+                  index === activeIndex ? "active" : ""
+                }`}
               >
                 <section className="hero-slide vh-100 d-flex align-items-center position-relative">
                   <div className="container position-relative z-index-2 text-white text-start">
@@ -159,6 +267,39 @@ const Home = () => {
                 </section>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services list section */}
+      <section className="py-5 custom-bg">
+        <div className="container">
+          <div className="row d-flex justify-content-center g-4">
+            {services.map((service, idx) => (
+              <div key={idx} className="col-12 col-md-2" style={{minWidth: '250px'}}>
+                <div className="card text-center shadow-sm border-0 rounded-0 h-100 overflow-hidden department-card">
+                  <div className="card-body">
+                    <span className="d-flex justify-content-center align-items-center z-1 position-relative rounded-circle department-icon">
+                    <i
+                      className={`bi ${service.icon} fs-1 z-2 highlight`}
+                    ></i>
+                    </span>
+                    <h6 className="fw-bold department-title position-relative">{service.title}</h6>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center pt-5">
+            <p className="text-white m-0">
+              Get our quick services from the municipal {" "}
+              <a
+                href="#services"
+                className="fw-bold text-white text-decoration-underline"
+              >
+                View all services
+              </a>
+            </p>
           </div>
         </div>
       </section>

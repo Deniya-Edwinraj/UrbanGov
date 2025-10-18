@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import HeroImg from "../assets/hero1.jpg";
+import ServicesListbg from "../assets/services-bg.png";
 import { services, slideData } from "../Constant/Data";
 
 const Home = () => {
@@ -272,30 +272,43 @@ const Home = () => {
       </section>
 
       {/* Services list section */}
-      <section className="py-5 custom-bg">
+      <section className="custom-bg position-relative mt-4">
+        <div
+          className="department-bg"
+          style={{
+            backgroundImage: `url(${ServicesListbg})`,
+          }}
+        ></div>
         <div className="container">
-          <div className="row d-flex justify-content-center g-4">
+          <div className="row py-5 d-flex justify-content-center g-4">
             {services.map((service, idx) => (
-              <div key={idx} className="col-12 col-md-2" style={{minWidth: '250px'}}>
+              <div
+                key={idx}
+                className="col-12 col-md-2"
+                style={{ minWidth: "250px" }}
+              >
                 <div className="card text-center shadow-sm border-0 rounded-0 h-100 overflow-hidden department-card">
                   <div className="card-body">
                     <span className="d-flex justify-content-center align-items-center z-1 position-relative rounded-circle department-icon">
-                    <i
-                      className={`bi ${service.icon} fs-1 z-2 highlight`}
-                    ></i>
+                      <i
+                        className={`bi ${service.icon} fs-1 z-2 highlight`}
+                      ></i>
                     </span>
-                    <h6 className="fw-bold department-title position-relative">{service.title}</h6>
+                    <h6 className="fw-bold department-title position-relative">
+                      {service.title}
+                    </h6>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-          <div className="text-center pt-5">
+          </div>{" "}
+          <hr className="m-0" />
+          <div className="text-center py-4">
             <p className="text-white m-0">
-              Get our quick services from the municipal {" "}
+              Get our quick services from the municipal.{" "}
               <a
                 href="#services"
-                className="fw-bold text-white text-decoration-underline"
+                className="fw-bold text-white text-decoration-none"
               >
                 View all services
               </a>
@@ -303,6 +316,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* About section */}
     </div>
   );
 };

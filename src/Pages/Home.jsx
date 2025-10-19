@@ -394,7 +394,7 @@ const Home = () => {
             </div>
 
             {/* RIGHT COLUMN */}
-            <div className="col-md-6 text-start d-flex flex-column justify-content-center order-1 order-lg-2">
+            <div className="col-md-6 text-center text-md-start d-flex flex-column justify-content-center order-1 order-lg-2">
               <span>
                 <i className="bi bi-star-fill highlight"></i>
               </span>
@@ -413,7 +413,7 @@ const Home = () => {
                 randomised words which don't slightly.
               </p>
 
-              <div className="d-flex align-items-start gap-3 border-bottom pb-4 mb-4">
+              <div className="d-flex align-items-md-start align-items-center  gap-3 border-bottom pb-4 mb-4">
                 <div className="rounded-3 d-inline-flex align-items-center justify-content-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -432,7 +432,7 @@ const Home = () => {
                     />
                   </svg>
                 </div>
-                <h4 className="highlight fw-semibold mb-0">
+                <h4 className="highlight text-start fw-semibold mb-0">
                   Great city & place to develop your career & business.
                 </h4>
               </div>
@@ -441,7 +441,7 @@ const Home = () => {
                 majority have suffered alteration in some form, by injected hum
                 randomised words which don't slightly.
               </p>
-              <div className="d-flex align-items-center gap-4 flex-wrap">
+              <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-4 flex-wrap">
                 <button
                   className="btn btn-lg button fw-bold rounded-0 px-4 py-3 text-white position-relative overflow-hidden"
                   onClick={() => alert("CTA clicked")}

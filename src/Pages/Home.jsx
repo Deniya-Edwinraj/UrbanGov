@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import ServicesListbg from "../assets/services-bg.png";
 import { services, slideData } from "../Constant/Data";
+import ServicesListbg from "../assets/services-bg.png";
+import AboutLargeimg from "../assets/about-1.jpeg";
+import AboutSmallimg from "../assets/about-2.jpeg";
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -318,6 +320,139 @@ const Home = () => {
       </section>
 
       {/* About section */}
+      <section className="py-5 govity-hero bg-white">
+        <div className="container">
+          <div className="row align-items-center g-5">
+            {/* LEFT COLUMN */}
+            <div className="col-md-6 position-relative order-2 order-lg-1">
+              <div className="hero-media position-relative overflow-hidden d-flex flex-column justify-content-start align-items-start">
+                <img
+                  src={AboutLargeimg}
+                  style={{ height: "520px", width: "450px" }}
+                  alt="Young person learning with headphones"
+                  className="img-fluid  object-cover"
+                />
+
+                {/* Play Video button */}
+                <div
+                  className="video-link position-absolute z-2"
+                  bis_skin_checked="1"
+                >
+                  <a
+                    href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
+                    className="video-popup"
+                    bis_skin_checked="1"
+                  >
+                    <div
+                      className="video-icon position-relative d-flex align-items-center justify-content-center text-center text-white"
+                      bis_skin_checked="1"
+                    >
+                      <span>
+                        <i className="bi bi-play-fill fs-1"></i>
+                      </span>
+                      <i className="ripple"></i>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Small secondary image */}
+                <div className="secondary-photo position-absolute shadow overflow-hidden">
+                  <img
+                    src={AboutSmallimg}
+                    alt="Speaker at balcony"
+                    className="img-fluid w-100 h-100 object-cover"
+                  />
+                </div>
+
+                {/* badge */}
+                <div className="about-badge border-start border-success border-5 bg-white shadow p-4 d-flex align-items-center gap-3 z-2 position-relative">
+                  <div className="bg-light rounded-circle d-inline-flex align-items-center justify-content-center p-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="35"
+                      height="35"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
+                      />
+                    </svg>
+                  </div>
+                  <div className="text-start">
+                    <div className="text-muted fw-bold small mb-1">
+                      President Office
+                    </div>
+                    <div className="fw-semibold">+12 (3456) 7890</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN */}
+            <div className="col-md-6 text-start d-flex flex-column justify-content-center order-1 order-lg-2">
+              <span>
+                <i className="bi bi-star-fill highlight"></i>
+              </span>
+
+              <small className="mb-2 highlight fw-semibold">
+                WELCOME TO GOVITY
+              </small>
+
+              <h1 className="display-5 fw-bold mb-4">
+                Meet Ideological leader for youth generation
+              </h1>
+
+              <p className="text-secondary mb-4">
+                There are many variations of passages of available but the
+                majority have suffered alteration in some form, by injected hum
+                randomised words which don't slightly.
+              </p>
+
+              <div className="d-flex align-items-start gap-3 border-bottom pb-4 mb-4">
+                <div className="rounded-3 d-inline-flex align-items-center justify-content-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    className="text-dark"
+                    width="55"
+                    height="55"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
+                    />
+                  </svg>
+                </div>
+                <h4 className="highlight fw-semibold mb-0">
+                  Great city & place to develop your career & business.
+                </h4>
+              </div>
+              <p className="text-secondary mb-4">
+                There are many variations of passages of available but the
+                majority have suffered alteration in some form, by injected hum
+                randomised words which don't slightly.
+              </p>
+              <div className="d-flex align-items-center gap-4 flex-wrap">
+                <button
+                  className="btn btn-lg button fw-bold rounded-0 px-4 py-3 text-white position-relative overflow-hidden"
+                  onClick={() => alert("CTA clicked")}
+                >
+                  Discover More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

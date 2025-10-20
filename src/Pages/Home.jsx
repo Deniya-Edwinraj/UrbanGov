@@ -1,5 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { aboutCards, posts, services, slideData } from "../Constant/Data";
+import {
+  aboutCards,
+  logos,
+  posts,
+  services,
+  slideData,
+} from "../Constant/Data";
 import ServicesListbg from "../assets/services-bg.png";
 import AboutLargeimg from "../assets/about-1.jpeg";
 import AboutSmallimg from "../assets/about-2.jpeg";
@@ -468,14 +474,17 @@ const Home = () => {
                     <h4 className="fw-bold">{c.subtitle}</h4>
                   </div>
 
-                  <div className="feature-content position-absolute text-center z-2" bis_skin_checked="1">
+                  <div
+                    className="feature-content position-absolute text-center z-2"
+                    bis_skin_checked="1"
+                  >
                     <div
                       className="feature-content-top position-relative d-block p-4 custom-bg"
                       bis_skin_checked="1"
                     >
-                        <span className="position-relative d-inline-block">
-                          <i className={`bi ${c.icon} fs-1 text-white`}></i>
-                        </span>
+                      <span className="position-relative d-inline-block">
+                        <i className={`bi ${c.icon} fs-1 text-white`}></i>
+                      </span>
                       <h3 className="text-white fw-bold mt-3">
                         {c.title} <br /> {c.subtitle}
                       </h3>
@@ -500,58 +509,102 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
-          <section className="py-5">
-            <div className="container">
-      <div className="text-center mb-5">
-                      <span>
-                <i className="bi bi-star-fill highlight"></i>
-              </span>
-        <p className="text-uppercase small text-success mb-2">Latest News</p>
-        <h2 className="fw-bold">Latest news & articles<br/>from the blog</h2>
-      </div>
-
-      <div className="row g-4">
-        {posts.map((p, i) => (
-          <div className="col-12 col-md-6 col-lg-4" key={i}>
-            <article className="position-relative bg-white shadow-sm overflow-hidden">
-              {/* IMAGE */}
-              <div style={{ height: "260px", overflow: "hidden" }}>
-                <img
-                  src={p.img}
-                  alt=""
-                  className="w-100 h-100"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-
-              {/* DATE BADGE */}
-              <div
-                className="position-absolute bg-success text-white text-center border-bottom border-light border-3 p-2"
-                style={{ top: "15px", left: "15px", minWidth: "48px" }}
-              >
-                <div className="fw-bold">{p.date}</div> 
-                <div className="small">{p.month}</div>
-              </div>
-
-              {/* CONTENT */}
-              <div className="p-4 text-start">
-                <div className="d-flex align-items-center mb-2 small text-muted">
-                  <span className="me-3"> <i class="bi bi-person-circle highlight"></i> {p.author}</span> | 
-                  <span className="ms-3"><i class="bi bi-chat-right-text-fill highlight"></i> {p.comments} Comments</span>
-                </div>
-                <h4 className="fw-bold my-3 text-start">{p.title}</h4>
-<hr />
-                <a href="#" className="w-100 text-decoration-none text-start text-muted">
-                  Read More →
-                </a>
-              </div>
-            </article>
+      {/* Partner Section */}
+      <section className="py-5">
+        <div className="container">
+          <div className="d-flex align-items-center gap-3 mb-4">
+            <div className="flex-grow-1 border-top" />
+            <h6 className="text-uppercase text-muted mb-0 letter-sp-1 px-4">
+              Our Partners & Supporters
+            </h6>
+            <div className="flex-grow-1 border-top" />
           </div>
-        ))}
-      </div>
+
+          <div className="logos-wrapper mt-5 overflow-hidden w-100 position-relative">
+            <div className="logos-track d-flex align-items-center">
+              {logos.concat(logos).map((logo, idx) => (
+                <div key={idx} className="logo-item">
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="img-fluid px-3"
+                    style={{ height: "100px" }}
+                  />
+                </div>
+              ))}
             </div>
-    </section>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="py-5">
+        <div className="container">
+          <div className="text-center mb-5">
+            <span>
+              <i className="bi bi-star-fill highlight"></i>
+            </span>
+            <p className="text-uppercase small text-success mb-2">
+              Latest News
+            </p>
+            <h2 className="fw-bold">
+              Latest news & articles
+              <br />
+              from the blog
+            </h2>
+          </div>
+
+          <div className="row g-4">
+            {posts.map((p, i) => (
+              <div className="col-12 col-md-6 col-lg-4" key={i}>
+                <article className="position-relative bg-white shadow-sm overflow-hidden">
+                  {/* IMAGE */}
+                  <div style={{ height: "260px", overflow: "hidden" }}>
+                    <img
+                      src={p.img}
+                      alt=""
+                      className="w-100 h-100"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+
+                  {/* DATE BADGE */}
+                  <div
+                    className="position-absolute bg-success text-white text-center border-bottom border-light border-3 p-2"
+                    style={{ top: "15px", left: "15px", minWidth: "48px" }}
+                  >
+                    <div className="fw-bold">{p.date}</div>
+                    <div className="small">{p.month}</div>
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="p-4 text-start">
+                    <div className="d-flex align-items-center mb-2 small text-muted">
+                      <span className="me-3">
+                        {" "}
+                        <i class="bi bi-person-circle highlight"></i> {p.author}
+                      </span>{" "}
+                      |
+                      <span className="ms-3">
+                        <i class="bi bi-chat-right-text-fill highlight"></i>{" "}
+                        {p.comments} Comments
+                      </span>
+                    </div>
+                    <h4 className="fw-bold my-3 text-start">{p.title}</h4>
+                    <hr />
+                    <a
+                      href="#"
+                      className="w-100 text-decoration-none text-start text-muted"
+                    >
+                      Read More →
+                    </a>
+                  </div>
+                </article>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -13,6 +13,7 @@ import servicesImg from "../assets/aboutcard-3.jpeg";
 import Blog1 from "../assets/blog-1.jpg";
 import Blog2 from "../assets/blog-2.jpg";
 import Blog3 from "../assets/blog-3.jpeg";
+import partner from "../assets/logo.png";
 
 export const galleryData = [
   gallery1,
@@ -113,4 +114,12 @@ export const posts = [
     comments: 2,
     author: "Admin",
   },
+];
+
+export const logos = [
+  { src: partner, alt: "Envato" },
+  { src: partner, alt: "Envato" },
+  { src: partner, alt: "Envato" },
+  { src: partner, alt: "Envato" },
+  { src: partner, alt: "Envato" },
 ];

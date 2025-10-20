@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { services, slideData } from "../Constant/Data";
+import { aboutCards, posts, services, slideData } from "../Constant/Data";
 import ServicesListbg from "../assets/services-bg.png";
 import AboutLargeimg from "../assets/about-1.jpeg";
 import AboutSmallimg from "../assets/about-2.jpeg";
@@ -442,17 +442,116 @@ const Home = () => {
                 randomised words which don't slightly.
               </p>
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-4 flex-wrap">
-                <button
-                  className="btn btn-lg button fw-bold rounded-0 px-4 py-3 text-white position-relative overflow-hidden"
-                  onClick={() => alert("CTA clicked")}
-                >
+                <button className="btn btn-lg button fw-bold rounded-0 px-4 py-3 text-white position-relative overflow-hidden">
                   Discover More
                 </button>
               </div>
             </div>
           </div>
+
+          <div className="row pt-5 g-5">
+            {aboutCards.map((c, i) => (
+              <div className="col-12 col-md-6 col-lg-4" key={i}>
+                <article className="feature-card position-relative overflow-hidden shadow-sm">
+                  <div style={{ height: "450px" }}>
+                    <img
+                      src={c.img}
+                      className="w-100 feature-card-img object-cover h-100"
+                      alt=""
+                    />
+                  </div>
+                  <div className="feature-badge position-absolute bg-white shadow p-4 text-center">
+                    <div className="icon-wrap rounded-circle position-absolute d-flex align-items-center justify-content-center">
+                      <i className={`bi ${c.icon} fs-1 highlight`}></i>
+                    </div>
+                    <h4 className="mt-3 fw-bold">{c.title}</h4>
+                    <h4 className="fw-bold">{c.subtitle}</h4>
+                  </div>
+
+                  <div className="feature-content position-absolute text-center z-2" bis_skin_checked="1">
+                    <div
+                      className="feature-content-top position-relative d-block p-4 custom-bg"
+                      bis_skin_checked="1"
+                    >
+                        <span className="position-relative d-inline-block">
+                          <i className={`bi ${c.icon} fs-1 text-white`}></i>
+                        </span>
+                      <h3 className="text-white fw-bold mt-3">
+                        {c.title} <br /> {c.subtitle}
+                      </h3>
+                    </div>
+                    <div
+                      class="p-4 bg-white position-relative d-block"
+                      bis_skin_checked="1"
+                    >
+                      <p class="">
+                        Aliquam viverra arcu. Donec aliquet blandit enim.
+                        Suspendisse id quam <br /> sed eros luctus sit ame.
+                      </p>
+                      <button className="btn btn-lg button fw-bold rounded-0 px-4 py-3 text-white position-relative overflow-hidden mb-2 mb-md-0">
+                        Discover More
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
+      {/* Blog Section */}
+          <section className="py-5">
+            <div className="container">
+      <div className="text-center mb-5">
+                      <span>
+                <i className="bi bi-star-fill highlight"></i>
+              </span>
+        <p className="text-uppercase small text-success mb-2">Latest News</p>
+        <h2 className="fw-bold">Latest news & articles<br/>from the blog</h2>
+      </div>
+
+      <div className="row g-4">
+        {posts.map((p, i) => (
+          <div className="col-12 col-md-6 col-lg-4" key={i}>
+            <article className="position-relative bg-white shadow-sm overflow-hidden">
+              {/* IMAGE */}
+              <div style={{ height: "260px", overflow: "hidden" }}>
+                <img
+                  src={p.img}
+                  alt=""
+                  className="w-100 h-100"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+
+              {/* DATE BADGE */}
+              <div
+                className="position-absolute bg-success text-white text-center border-bottom border-light border-3 p-2"
+                style={{ top: "15px", left: "15px", minWidth: "48px" }}
+              >
+                <div className="fw-bold">{p.date}</div> 
+                <div className="small">{p.month}</div>
+              </div>
+
+              {/* CONTENT */}
+              <div className="p-4 text-start">
+                <div className="d-flex align-items-center mb-2 small text-muted">
+                  <span className="me-3"> <i class="bi bi-person-circle highlight"></i> {p.author}</span> | 
+                  <span className="ms-3"><i class="bi bi-chat-right-text-fill highlight"></i> {p.comments} Comments</span>
+                </div>
+                <h4 className="fw-bold my-3 text-start">{p.title}</h4>
+<hr />
+                <a href="#" className="w-100 text-decoration-none text-start text-muted">
+                  Read More →
+                </a>
+              </div>
+            </article>
+          </div>
+        ))}
+      </div>
+            </div>
+    </section>
     </div>
   );
 };

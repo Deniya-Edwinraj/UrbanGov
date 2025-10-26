@@ -509,3 +509,67 @@
     transform: translateX(-50%);
   }
 }
+
+/* Video Section */
+.parallax-hero {
+  height: 50vh;
+  background-image: url('./assets/hero3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.video-overlay {
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.parallex-video-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  transition: all 0.5s ease;
+}
+
+.parallex-video-icon::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: -9px;
+  right: -9px;
+  bottom: -9px;
+  border: 1px solid rgba(255,255,255, .2);
+  border-radius: 50%;
+}
+
+.parallex-video-icon:hover {
+  background-color: var(--secondary-color);
+}
+
+.parallex-video-icon .ripple:before,
+.parallex-video-icon .ripple:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 81px;
+  height: 81px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 0 rgba( 243, 243, 243, 0.6);
+  animation: ripple 3s infinite;
+  border-radius: 50%;
+}
+
+.parallex-video-icon .ripple:before {
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+  content: "";
+  position: absolute;
+}
+
+.parallex-video-icon .ripple:after {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  content: "";
+  position: absolute;
+}

@@ -326,7 +326,7 @@ const Home = () => {
       </section>
 
       {/* About section */}
-      <section className="py-5 govity-hero bg-white">
+      <section className="py-5 bg-white">
         <div className="container">
           <div className="row align-items-center g-5">
             {/* LEFT COLUMN */}
@@ -406,17 +406,20 @@ const Home = () => {
               </span>
 
               <small className="mb-2 highlight fw-semibold">
-                WELCOME TO GOVITY
+                WELCOME TO URBANGOV
               </small>
 
-              <h1 className="display-5 fw-bold mb-4">
-                Meet Ideological leader for youth generation
-              </h1>
+              <h3 className="fw-bold mb-4">
+                Your gateway to public services - made simple, transparent and
+                accessible
+              </h3>
 
               <p className="text-secondary mb-4">
-                There are many variations of passages of available but the
-                majority have suffered alteration in some form, by injected hum
-                randomised words which don't slightly.
+                UrbanGov is a citizen-first digital platform that brings
+                government services closer to people. From certificates and
+                permits to welfare schemes and local administration support, we
+                help individuals and businesses access public services without
+                long queues, paperwork confusion, or uncertainty.
               </p>
 
               <div className="d-flex align-items-md-start align-items-center  gap-3 border-bottom pb-4 mb-4">
@@ -439,13 +442,17 @@ const Home = () => {
                   </svg>
                 </div>
                 <h4 className="highlight text-start fw-semibold mb-0">
-                  Great city & place to develop your career & business.
+                  Our mission is to make governance easy, inclusive, and
+                  efficient for every citizen.{" "}
                 </h4>
               </div>
               <p className="text-secondary mb-4">
-                There are many variations of passages of available but the
-                majority have suffered alteration in some form, by injected hum
-                randomised words which don't slightly.
+                UrbanGov streamlines the way people interact with public
+                institutions. Instead of visiting multiple offices and waiting
+                in long lines, citizens can now find services, verify
+                eligibility, and apply online - all in one trusted platform. We
+                believe accessing public services should be clear, fast and
+                transparent for everyone.
               </p>
               <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-4 flex-wrap">
                 <button className="btn btn-lg button fw-bold rounded-0 px-4 py-3 text-white position-relative overflow-hidden">
@@ -493,10 +500,7 @@ const Home = () => {
                       class="p-4 bg-white position-relative d-block"
                       bis_skin_checked="1"
                     >
-                      <p class="">
-                        Aliquam viverra arcu. Donec aliquet blandit enim.
-                        Suspendisse id quam <br /> sed eros luctus sit ame.
-                      </p>
+                      <p class="">{c.description}</p>
                       <button className="btn btn-lg button fw-bold rounded-0 px-4 py-3 text-white position-relative overflow-hidden mb-2 mb-md-0">
                         Discover More
                       </button>
@@ -506,6 +510,34 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="parallax-hero d-flex align-items-center justify-content-center text-center position-relative py-5">
+        <div className="video-overlay position-absolute"></div>
+
+        <div className="container content text-white position-relative z-2">
+          <div class="d-flex justify-content-center" bis_skin_checked="1">
+            <a
+              href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
+              class="video-popup"
+              bis_skin_checked="1"
+            >
+              <div
+                class="parallex-video-icon position-relative d-flex align-items-center justify-content-center text-center z-1 rounded-circle"
+                bis_skin_checked="1"
+              >
+                <span>
+                  <i className="bi bi-play-fill text-white fs-3"></i>
+                </span>
+                <i class="ripple"></i>
+              </div>
+            </a>
+          </div>
+          <h1 className="mt-4 display-4 fw-bold">
+            Quick access to essential public <br /> services all in one place.
+          </h1>
         </div>
       </section>
 
@@ -557,7 +589,7 @@ const Home = () => {
           <div className="row g-4">
             {posts.map((p, i) => (
               <div className="col-12 col-md-6 col-lg-4" key={i}>
-                <article className="position-relative bg-white shadow-sm overflow-hidden">
+                <article className="card rounded-0 border-0 position-relative bg-white shadow-sm overflow-hidden d-flex flex-column h-100">
                   {/* IMAGE */}
                   <div style={{ height: "260px", overflow: "hidden" }}>
                     <img
@@ -578,7 +610,7 @@ const Home = () => {
                   </div>
 
                   {/* CONTENT */}
-                  <div className="p-4 text-start">
+                  <div className="p-4 text-start flex-grow-1 d-flex flex-column">
                     <div className="d-flex align-items-center mb-2 small text-muted">
                       <span className="me-3">
                         {" "}
@@ -591,10 +623,9 @@ const Home = () => {
                       </span>
                     </div>
                     <h4 className="fw-bold my-3 text-start">{p.title}</h4>
-                    <hr />
                     <a
                       href="#"
-                      className="w-100 text-decoration-none text-start text-muted"
+                      className="w-100 border-top pt-3 text-decoration-none text-start text-muted mt-auto"
                     >
                       Read More →
                     </a>

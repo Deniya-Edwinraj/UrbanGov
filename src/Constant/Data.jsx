@@ -48,23 +48,23 @@ export const slideData = [
 export const services = [
   {
     icon: "bi-bank",
-    title: "Your Government",
+    title: "Public Services",
   },
   {
     icon: "bi-briefcase",
-    title: "Jobs & Unemployment",
+    title: "Jobs & Employment",
   },
   {
     icon: "bi-building",
-    title: "Business & Industrials",
+    title: "Business & Permits",
   },
   {
     icon: "bi-bus-front",
-    title: "Roads & Transportation",
+    title: "Transport & Mobility",
   },
   {
     icon: "bi-flower3",
-    title: "Culture & Recreations",
+    title: "Culture & Community",
   },
 ];
 
@@ -74,18 +74,24 @@ export const aboutCards = [
     icon: "bi-journal-richtext",
     title: "History &",
     subtitle: "establishment",
+    description:
+      "Learn about the city's origins, growth, and the institutions built to serve citizens.",
   },
   {
     img: tourismImg,
     icon: "bi-map",
     title: "Tourism &",
     subtitle: "visitor guides",
+    description:
+      "Discover attractions, heritage sites, and helpful guides for visitors and locals.",
   },
   {
     img: servicesImg,
     icon: "bi-bank",
     title: "Service &",
     subtitle: "departments",
+    description:
+      "Find government departments and services with step-by-step assistance.",
   },
 ];
 
@@ -94,25 +100,25 @@ export const posts = [
     img: Blog1,
     date: "30",
     month: "JAN",
-    title: "Supporting local business to bounce back",
+    title: "Small business relief & recovery programs launched",
     comments: 2,
-    author: "Admin",
+    author: "UrbanGov Admin",
   },
   {
     img: Blog2,
     date: "30",
     month: "JAN",
-    title: "The city photography new contest",
+    title: "City announces new public photography & tourism initiative",
     comments: 2,
-    author: "Admin",
+    author: "UrbanGov Admin",
   },
   {
     img: Blog3,
     date: "30",
     month: "JAN",
-    title: "Leverage agile frameworks to provide",
+    title: "New citizen services dashboard rolled out for transparency",
     comments: 2,
-    author: "Admin",
+    author: "UrbanGov Admin",
   },
 ];
 

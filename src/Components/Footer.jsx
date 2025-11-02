@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.png";
 import SocialIcons from "./SocialIcons";
-import { galleryData } from "../Constant/Data";
+import { departments, footerGalleryData, services } from "../Constant/Data";
 
 export default function Footer() {
   return (
@@ -37,6 +37,11 @@ export default function Footer() {
         <div className="row mx-0 py-4">
           <div className="col-12 col-md-3 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start">
             <h4 className="my-4 text-white fw-bold heading">Contact</h4>
+
+            <p className="text-light small">
+              UrbanGov is a citizen-first platform that simplifies access to
+              government services
+            </p>
 
             <ul className="list-unstyled lh-lg">
               <li className="d-flex align-items-center gap-3">
@@ -124,115 +129,43 @@ export default function Footer() {
           <div className="col-12 col-md-2 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start text-white">
             <h4 className="my-4 text-white heading fw-bold">Services</h4>
             <ul className="list-unstyled text-white fw-semibold lh-lg">
-              <li className="mb-2">
-                <a
-                  href="/about"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  About Us
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="/services"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  Services
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="/departments"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  Departments
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="/news"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  News
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="/events"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  Events
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="/faq"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  FAQs
-                </a>
-              </li>
+              {services.map((service, index) => (
+                <li key={index} className="mb-2">
+                  <a
+                    href={`/services#${service.title
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
+                    className="text-decoration-none text-white hover-link d-flex align-items-center gap-2"
+                  >
+                    {service.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="col-12 col-md-2 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start text-white">
             <h4 className="my-4 text-white heading fw-bold">Departments</h4>
             <ul className="list-unstyled text-white fw-semibold lh-lg">
-              <li className="mb-2">
-                <a
-                  href="/about"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  About Us
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="/services"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  Services
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="/departments"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  Departments
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="/news"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  News
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="/events"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  Events
-                </a>
-              </li>
-              <li className="mb-2">
-                <a
-                  href="/faq"
-                  className="text-decoration-none text-white hover-link"
-                >
-                  FAQs
-                </a>
-              </li>
+              {departments.map((dept, index) => (
+                <li key={index} className="mb-2">
+                  <a
+                    href={`/departments#${dept.title
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
+                    className="text-decoration-none text-white hover-link d-flex align-items-center gap-2"
+                  >
+                    {dept.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="col-12 col-md-3 my-0 my-lg-4 d-flex flex-column text-center text-md-start align-items-center align-items-md-start text-white">
             <h4 className="my-4 text-white heading fw-bold">Gallery</h4>
             <div className="row">
-              {galleryData.map((image, index) => (
+              {footerGalleryData.map((image, index) => (
                 <div key={index} className="col-4 mb-3">
                   <div
                     className="image-container position-relative border-dark d-inline-block overflow-hidden"
@@ -266,7 +199,7 @@ export default function Footer() {
         <div className="container">
           <div className="row justify-content-between align-items-center py-2">
             <div className="col-12 text-center">
-              <p className="text-white gy-3 lh-lg py-2 m-0">
+              <p className="text-white gy-3 lh-lg py-2 m-0 small">
                 © {new Date().getFullYear()}{" "}
                 <span className="highlight fw-bold">UrbanGov</span>. All right
                 reserved. <br />

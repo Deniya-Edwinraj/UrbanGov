@@ -573,3 +573,57 @@
   content: "";
   position: absolute;
 }
+
+/* Back To Top */
+.scroll-to-top {
+  bottom: 20px;
+  right: 30px;
+  width: 35px;
+  height: 35px;
+  transition: transform 0.9s ease, opacity 0.9s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-800px);
+  pointer-events: none;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-to-top .ripple,
+.scroll-to-top .ripple:before,
+.scroll-to-top .ripple:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 45px;
+  height: 45px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 0 rgba(12, 165, 84, 0.6);
+  animation: smallripple 3s infinite;
+}
+
+.scroll-to-top .ripple:before {
+  animation-delay: 0.9s;
+  content: "";
+  position: absolute;
+}
+
+.scroll-to-top .ripple:after {
+  animation-delay: 0.6s;
+  content: "";
+  position: absolute;
+}
+
+@keyframes smallripple {
+  70% {
+    box-shadow: 0 0 0 10px rgba(10, 165, 205, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(10, 165, 205, 0);
+  }
+}

@@ -1,9 +1,9 @@
 import gallery1 from "../assets/gallery1.png";
-import gallery2 from "../assets/gallery1.png";
-import gallery3 from "../assets/gallery1.png";
-import gallery4 from "../assets/gallery1.png";
-import gallery5 from "../assets/gallery1.png";
-import gallery6 from "../assets/gallery1.png";
+import gallery2 from "../assets/blog-3.jpeg";
+import gallery3 from "../assets/about-1.jpeg";
+import gallery4 from "../assets/about-2.jpeg";
+import gallery5 from "../assets/aboutcard-1.jpg";
+import gallery6 from "../assets/aboutcard-2.jpg";
 import hero1 from "../assets/hero3.jpg";
 import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero1.jpg";
@@ -15,7 +15,7 @@ import Blog2 from "../assets/blog-2.jpg";
 import Blog3 from "../assets/blog-3.jpeg";
 import partner from "../assets/logo.png";
 
-export const galleryData = [
+export const footerGalleryData = [
   gallery1,
   gallery2,
   gallery3,
@@ -67,6 +67,16 @@ export const services = [
     title: "Culture & Community",
   },
 ];
+
+export const departments = [
+  { title: "Public Works Department", icon: "bi-gear" },
+  { title: "Health & Sanitation", icon: "bi-heart-pulse" },
+  { title: "Education & Youth Affairs", icon: "bi-book" },
+  { title: "Finance & Revenue", icon: "bi-cash-coin" },
+  { title: "Urban Development", icon: "bi-building" },
+  { title: "Environmental Management", icon: "bi-tree" },
+];
+
 
 export const aboutCards = [
   {

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/Images/logo.png";
 import SocialIcons from "./SocialIcons";
 import { departments, footerGalleryData, services } from "../Constant/Data";
 
@@ -48,10 +48,10 @@ export default function Footer() {
                 <div className="text-start fw-bold d-flex flex-column">
                   <a
                     className="text-decoration-none text-white hover-link"
-                    href="tel:+(01) 9886 0005"
+                    href="tel:+12 (3456) 7890"
                   >
                     <i className="bi bi-telephone fs-5 me-2"></i>
-                    +(01) 9886 0005
+                    +12 (3456) 7890
                   </a>
                 </div>
               </li>

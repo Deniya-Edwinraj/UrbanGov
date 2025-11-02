@@ -6,9 +6,9 @@ import {
   services,
   slideData,
 } from "../Constant/Data";
-import ServicesListbg from "../assets/services-bg.png";
-import AboutLargeimg from "../assets/about-1.jpeg";
-import AboutSmallimg from "../assets/about-2.jpeg";
+import ServicesListbg from "../assets/Images/services-bg.png";
+import AboutLargeimg from "../assets/Images/about-1.jpeg";
+import AboutSmallimg from "../assets/Images/about-2.jpeg";
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);

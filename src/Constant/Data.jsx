@@ -1,19 +1,19 @@
-import gallery1 from "../assets/gallery1.png";
-import gallery2 from "../assets/blog-3.jpeg";
-import gallery3 from "../assets/about-1.jpeg";
-import gallery4 from "../assets/about-2.jpeg";
-import gallery5 from "../assets/aboutcard-1.jpg";
-import gallery6 from "../assets/aboutcard-2.jpg";
-import hero1 from "../assets/hero3.jpg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero1.jpg";
-import historyImg from "../assets/aboutcard-1.jpg";
-import tourismImg from "../assets/aboutcard-2.jpg";
-import servicesImg from "../assets/aboutcard-3.jpeg";
-import Blog1 from "../assets/blog-1.jpg";
-import Blog2 from "../assets/blog-2.jpg";
-import Blog3 from "../assets/blog-3.jpeg";
-import partner from "../assets/logo.png";
+import gallery1 from "../assets/Images/gallery1.png";
+import gallery2 from "../assets/Images/blog-3.jpeg";
+import gallery3 from "../assets/Images/about-1.jpeg";
+import gallery4 from "../assets/Images/about-2.jpeg";
+import gallery5 from "../assets/Images/aboutcard-1.jpg";
+import gallery6 from "../assets/Images/aboutcard-2.jpg";
+import hero1 from "../assets/Images/hero3.jpg";
+import hero2 from "../assets/Images/hero2.jpg";
+import hero3 from "../assets/Images/hero1.jpg";
+import historyImg from "../assets/Images/aboutcard-1.jpg";
+import tourismImg from "../assets/Images/aboutcard-2.jpg";
+import servicesImg from "../assets/Images/aboutcard-3.jpeg";
+import Blog1 from "../assets/Images/blog-1.jpg";
+import Blog2 from "../assets/Images/blog-2.jpg";
+import Blog3 from "../assets/Images/blog-3.jpeg";
+import partner from "../assets/Images/logo.png";
 
 export const footerGalleryData = [
   gallery1,
@@ -76,7 +76,6 @@ export const departments = [
   { title: "Urban Development", icon: "bi-building" },
   { title: "Environmental Management", icon: "bi-tree" },
 ];
-
 
 export const aboutCards = [
   {

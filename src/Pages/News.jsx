@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PageBanner from "../Components/PageBanner";
-import contact from "../assets/Images/contact.jpg";
 import { posts } from "../Constant/Data";
 
 const News = () => {

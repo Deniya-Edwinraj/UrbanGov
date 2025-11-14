@@ -496,10 +496,10 @@ const Home = () => {
                       </h3>
                     </div>
                     <div
-                      class="p-4 bg-white position-relative d-block"
+                      className="p-4 bg-white position-relative d-block"
                       bis_skin_checked="1"
                     >
-                      <p class="">{c.description}</p>
+                      <p className="">{c.description}</p>
                       <button className="btn btn-lg button fw-bold rounded-0 px-4 py-3 text-white position-relative overflow-hidden mb-2 mb-md-0">
                         Discover More
                       </button>
@@ -517,20 +517,20 @@ const Home = () => {
         <div className="video-overlay position-absolute"></div>
 
         <div className="container content text-white position-relative z-2">
-          <div class="d-flex justify-content-center" bis_skin_checked="1">
+          <div className="d-flex justify-content-center" bis_skin_checked="1">
             <a
               href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
-              class="video-popup"
+              className="video-popup"
               bis_skin_checked="1"
             >
               <div
-                class="parallex-video-icon position-relative d-flex align-items-center justify-content-center text-center z-1 rounded-circle"
+                className="parallex-video-icon position-relative d-flex align-items-center justify-content-center text-center z-1 rounded-circle"
                 bis_skin_checked="1"
               >
                 <span>
                   <i className="bi bi-play-fill text-white fs-3"></i>
                 </span>
-                <i class="ripple"></i>
+                <i className="ripple"></i>
               </div>
             </a>
           </div>
@@ -610,11 +610,11 @@ const Home = () => {
                     <div className="d-flex align-items-center mb-2 small text-muted">
                       <span className="me-3">
                         {" "}
-                        <i class="bi bi-person-circle highlight"></i> {p.author}
+                        <i className="bi bi-person-circle highlight"></i> {p.author}
                       </span>{" "}
                       |
                       <span className="ms-3">
-                        <i class="bi bi-chat-right-text-fill highlight"></i>{" "}
+                        <i className="bi bi-chat-right-text-fill highlight"></i>{" "}
                         {p.comments} Comments
                       </span>
                     </div>

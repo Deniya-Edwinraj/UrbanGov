@@ -220,6 +220,13 @@
   mix-blend-mode: multiply;
 }
 
+@media (max-width: 768px) {
+  #heroCarousel {
+    background-size: cover !important;    
+    background-position: center center;
+  }
+}
+
 .bar {
   content: "";
   position: absolute;

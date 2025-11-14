@@ -30,7 +30,7 @@ const BackToTop = () => {
       } d-flex align-items-center justify-content-center position-fixed back-light rounded-0 z-2`}
       onClick={scrollToTop}
     >
-      <i class="bi bi-chevron-up  text-white"></i>
+      <i className="bi bi-chevron-up  text-white"></i>
                             <i className="ripple"></i>
 
     </div>

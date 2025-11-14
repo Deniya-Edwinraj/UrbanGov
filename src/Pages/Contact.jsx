@@ -85,9 +85,9 @@ const Contact = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-6">
-                <div class="position-relative d-block ms-4">
-                  <div class="contact-img-box position-relative d-block">
-                    <div class="contact-img position-relative d-block">
+                <div className="position-relative d-block ms-4">
+                  <div className="contact-img-box position-relative d-block">
+                    <div className="contact-img position-relative d-block">
                       <img src={contact} alt="contact" className="w-100" />
                     </div>
                   </div>

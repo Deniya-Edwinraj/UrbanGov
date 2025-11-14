@@ -182,6 +182,11 @@ const Home = () => {
     }, 50);
   };
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 3;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const visiblePosts = posts.slice(startIndex, startIndex + itemsPerPage);
+
   return (
     <div className="container-fluid p-0">
       {/* hero section */}
@@ -598,11 +603,14 @@ const Home = () => {
             </h2>
           </div>
 
-          <div className="row g-4">
-            {posts.map((p, i) => (
+          <div className="row gy-5">
+            {visiblePosts.map((p, i) => (
               <div className="col-12 col-md-6 col-lg-4" key={i}>
-                <article className="card rounded-0 border-0 position-relative bg-white shadow-sm overflow-hidden d-flex flex-column h-100">
-                  <div style={{ height: "260px", overflow: "hidden" }}>
+                <article className="news-card card rounded-0 border-0 position-relative bg-white shadow-sm overflow-hidden d-flex flex-column h-100">
+                  <div
+                    className="news-card-img d-block position-relative z-1 overflow-hidden"
+                    style={{ height: "260px" }}
+                  >
                     <img
                       src={p.img}
                       alt=""

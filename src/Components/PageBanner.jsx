@@ -13,6 +13,8 @@ const PageBanner = ({ title, subtitle }) => {
           {" / "}
           {title}
         </p>
+
+        <p>{subtitle}</p>
       </div>
     </section>
   );

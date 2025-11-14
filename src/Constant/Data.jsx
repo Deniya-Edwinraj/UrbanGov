@@ -13,6 +13,15 @@ import servicesImg from "../assets/Images/aboutcard-3.jpeg";
 import Blog1 from "../assets/Images/blog-1.jpg";
 import Blog2 from "../assets/Images/blog-2.jpg";
 import Blog3 from "../assets/Images/blog-3.jpeg";
+import Blog4 from "../assets/Images/blog-4.jpg";
+import Blog5 from "../assets/Images/blog-5.jpg";
+import Blog6 from "../assets/Images/blog-6.jpg";
+import Blog7 from "../assets/Images/blog-7.jpg";
+import Blog8 from "../assets/Images/blog-8.jpg";
+import Blog9 from "../assets/Images/blog-9.jpg";
+import Blog10 from "../assets/Images/blog-10.jpg";
+import Blog11 from "../assets/Images/blog-11.jpg";
+import Blog12 from "../assets/Images/blog-12.jpg";
 import partner from "../assets/Images/logo.png";
 
 export const footerGalleryData = [
@@ -129,6 +138,78 @@ export const posts = [
     comments: 2,
     author: "UrbanGov Admin",
   },
+  {
+  img: Blog4,
+  date: "12",
+  month: "FEB",
+  title: "Online licensing service now available for small businesses",
+  comments: 4,
+  author: "UrbanGov Admin",
+},
+{
+  img: Blog5,
+  date: "18",
+  month: "FEB",
+  title: "UrbanGov mobile app launched for faster citizen access",
+  comments: 6,
+  author: "UrbanGov Admin",
+},
+{
+  img: Blog6,
+  date: "27",
+  month: "FEB",
+  title: "New digital ID verification introduced to reduce queue times",
+  comments: 3,
+  author: "UrbanGov Admin",
+},
+{
+  img: Blog7,
+  date: "05",
+  month: "MAR",
+  title: "Citizens can now track service requests in real-time",
+  comments: 5,
+  author: "UrbanGov Admin",
+},
+{
+  img: Blog8,
+  date: "11",
+  month: "MAR",
+  title: "UrbanGov expands support for senior citizens and differently-abled",
+  comments: 8,
+  author: "UrbanGov Admin",
+},
+{
+  img: Blog9,
+  date: "20",
+  month: "MAR",
+  title: "City planning data now publicly accessible on Open Data Portal",
+  comments: 2,
+  author: "UrbanGov Admin",
+},
+{
+  img: Blog10,
+  date: "25",
+  month: "MAR",
+  title: "Waste management alerts to improve neighborhood cleanliness",
+  comments: 3,
+  author: "UrbanGov Admin",
+},
+{
+  img: Blog11,
+  date: "02",
+  month: "APR",
+  title: "New safety reporting tool introduced for emergencies",
+  comments: 7,
+  author: "UrbanGov Admin",
+},
+{
+  img: Blog12,
+  date: "08",
+  month: "APR",
+  title: "Local job portal launched to empower community employment",
+  comments: 9,
+  author: "UrbanGov Admin",
+},
 ];
 
 export const logos = [

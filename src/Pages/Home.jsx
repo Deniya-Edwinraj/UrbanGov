@@ -16,6 +16,17 @@ const Home = () => {
   const [zoomLevel, setZoomLevel] = useState(100);
   const intervalRef = useRef(null);
   const zoomIntervalRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // same as your media query
+    };
+
+    handleResize(); // run on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Date & time getting
   const [date, setDate] = useState(new Date());
@@ -180,10 +191,12 @@ const Home = () => {
         data-bs-ride="carousel"
         style={{
           backgroundImage: `url(${slideData[activeIndex].image})`,
-          backgroundSize: `${zoomLevel}%`,
+          backgroundSize: isMobile
+            ? `auto ${zoomLevel}%`
+            : `${zoomLevel}% auto`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          transition: "background-size 0.5s ease-out", 
+          transition: "background-size 0.5s ease-out",
         }}
       >
         <div className="bar"></div>
@@ -444,7 +457,7 @@ const Home = () => {
                   efficient for every citizen.{" "}
                 </h4>
               </div>
-              
+
               <p className="text-secondary mb-4">
                 UrbanGov streamlines the way people interact with public
                 institutions. Instead of visiting multiple offices and waiting
@@ -610,7 +623,8 @@ const Home = () => {
                     <div className="d-flex align-items-center mb-2 small text-muted">
                       <span className="me-3">
                         {" "}
-                        <i className="bi bi-person-circle highlight"></i> {p.author}
+                        <i className="bi bi-person-circle highlight"></i>{" "}
+                        {p.author}
                       </span>{" "}
                       |
                       <span className="ms-3">

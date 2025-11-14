@@ -620,7 +620,7 @@ const Home = () => {
                   </div>
 
                   <div
-                    className="position-absolute bg-success text-white text-center border-bottom border-light border-3 p-2"
+                    className="position-absolute bg-success text-white text-center border-bottom border-light border-3 z-2 p-2"
                     style={{ top: "15px", left: "15px", minWidth: "48px" }}
                   >
                     <div className="fw-bold">{p.date}</div>

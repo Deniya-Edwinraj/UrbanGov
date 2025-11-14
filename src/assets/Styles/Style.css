@@ -521,7 +521,7 @@
 /* Video Section */
 .parallax-hero {
   height: 50vh;
-  background-image: url("./assets/hero3.jpg");
+  background-image: url("../Images/hero3.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -183,10 +183,8 @@ const Home = () => {
           backgroundSize: `${zoomLevel}%`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          transition: "background-size 0.5s ease-out", // Smooth transition for zoom
+          transition: "background-size 0.5s ease-out", 
         }}
-        // onMouseEnter={handleMouseEnter}
-        // onMouseLeave={handleMouseLeave}
       >
         <div className="bar"></div>
         <div className="container">
@@ -328,7 +326,7 @@ const Home = () => {
       {/* About section */}
       <section className="py-5 bg-white">
         <div className="container">
-          <div className="row align-items-center g-5">
+          <div className="row align-items-center">
             {/* LEFT COLUMN */}
             <div className="col-md-6 position-relative order-2 order-lg-1">
               <div className="hero-media position-relative overflow-hidden d-flex flex-column justify-content-start align-items-start">
@@ -446,6 +444,7 @@ const Home = () => {
                   efficient for every citizen.{" "}
                 </h4>
               </div>
+              
               <p className="text-secondary mb-4">
                 UrbanGov streamlines the way people interact with public
                 institutions. Instead of visiting multiple offices and waiting
@@ -462,7 +461,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="row pt-5 g-5">
+          <div className="row pt-5 gy-5">
             {aboutCards.map((c, i) => (
               <div className="col-12 col-md-6 col-lg-4" key={i}>
                 <article className="feature-card position-relative overflow-hidden shadow-sm">
@@ -590,7 +589,6 @@ const Home = () => {
             {posts.map((p, i) => (
               <div className="col-12 col-md-6 col-lg-4" key={i}>
                 <article className="card rounded-0 border-0 position-relative bg-white shadow-sm overflow-hidden d-flex flex-column h-100">
-                  {/* IMAGE */}
                   <div style={{ height: "260px", overflow: "hidden" }}>
                     <img
                       src={p.img}
@@ -600,7 +598,6 @@ const Home = () => {
                     />
                   </div>
 
-                  {/* DATE BADGE */}
                   <div
                     className="position-absolute bg-success text-white text-center border-bottom border-light border-3 p-2"
                     style={{ top: "15px", left: "15px", minWidth: "48px" }}
@@ -609,7 +606,6 @@ const Home = () => {
                     <div className="small">{p.month}</div>
                   </div>
 
-                  {/* CONTENT */}
                   <div className="p-4 text-start flex-grow-1 d-flex flex-column">
                     <div className="d-flex align-items-center mb-2 small text-muted">
                       <span className="me-3">

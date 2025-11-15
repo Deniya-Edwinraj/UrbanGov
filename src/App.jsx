@@ -11,6 +11,7 @@ import Home from "./Pages/Home";
 import BackToTop from "./Components/BackToTop";
 import Contact from "./Pages/Contact";
 import News from "./Pages/News";
+import NewsDetails from "./Pages/NewsDetails";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/news" element={<News />} />
+            <Route path="/news/:title" element={<NewsDetails />} />
           </Routes>
         </div>
         <ScrollToTop />

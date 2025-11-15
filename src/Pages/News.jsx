@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PageBanner from "../Components/PageBanner";
 import { posts } from "../Constant/Data";
+import { Link } from "react-router-dom";
 
 const News = () => {
   const [visibleCount, setVisibleCount] = useState(6);
@@ -8,6 +9,8 @@ const News = () => {
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 3);
   };
+
+  const slugify = (text) => text.toLowerCase().replace(/ /g, "-");
 
   return (
     <>
@@ -55,12 +58,12 @@ const News = () => {
                         </span>
                       </div>
                       <h4 className="fw-bold my-3 text-start">{p.title}</h4>
-                      <a
-                        href="#"
+                      <Link
+                        to={`/news/${slugify(p.title)}`}
                         className="w-100 border-top pt-3 text-decoration-none text-start text-muted mt-auto"
                       >
-                        Read More →
-                      </a>
+                        Read More <i className="bi bi-arrow-right"></i>
+                      </Link>
                     </div>
                   </article>
                 </div>
